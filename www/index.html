@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="css/index.css">
+        <title>Citizens Reporting App</title>
+    </head>
+    <body>
+        <h1>Submit an Incident</h1>
+        <form id="incidentForm">
+          <input type="text" id="title" placeholder="Incident Title" required /><br>
+          <textarea id="description" placeholder="Description" required></textarea><br>
+          <select id="category">
+            <option value="accident">Accident</option>
+            <option value="fighting">Fighting</option>
+            <option value="rioting">Rioting</option>
+          </select><br>
+          <input type="text" id="location" placeholder="Location (Latitude, Longitude)" required /><br>
+          <input type="text" id="images" placeholder="Image URLs or Paths" /><br>
+          <button type="button" id="submitIncident">Submit Incident</button>
+        </form>
+      
+        <script src="cordova.js"></script>
+        <script src="js/index.js"></script>
+      </body>
+</html>
